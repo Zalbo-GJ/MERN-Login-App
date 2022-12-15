@@ -5,7 +5,9 @@ const bcrypt = require('bcryptjs');
 
 
 
-router.post('/register', async (req,res) => {
+router.post('/register', async (req, res) => {
+    
+    console.log(req.body.name);
 
     const {error} = registerValidate(req.body);
     if(error) return res.send(error.details[0].message);
@@ -29,7 +31,8 @@ router.post('/register', async (req,res) => {
    
 });
 
-router.post('/login', async (req,res) => {
+router.post('/login', async (req, res) => {
+    
     const {error} = loginValidate(req.body);
     if (error) return res.send(error.details[0].message);
 
@@ -37,9 +40,9 @@ router.post('/login', async (req,res) => {
     if (!user) return res.send('Email not registerd yet');
 
     const validpass = await bcrypt.compare(req.body.password,user.password);
-    if (!validpass ) return res.send("Wrong Password")
+    if (!validpass) return res.send("Wrong Password")
 
-    res.send("you are logged in")
+    res.send("you are logged in");
 })
 
 

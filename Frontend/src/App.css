@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Hahmlet:wght@100;300;500&family=Sora:wght@200;400&display=swap");
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background-color: rgb(139, 119, 230);
+}
+.scaf {
+  height: 100vh;
+  width: 100%;
+}
+.background-img {
+  background-image: url(./assets/Premium\ Photo\ _\ Minimal\ render\ laptop\ purple\ background.jpeg);
+  background-size: cover;
+  background-position: center;
+  width: inherit;
+  height: inherit;
+  filter: blur(12px);
+}
+.background-img::before {
+  content: "";
+  background-color: #3e2c437a;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.cont {
+  width: 55rem;
+  height: 70vh;
+  position: absolute;
+  top: 15%;
+  left: calc((100% - 55rem) / 2);
+  background-color: #ebe3eebe;
+  display: flex;
+  border-radius: 1.5rem;
+}
+.img {
+  height: inherit;
+  width: 50%;
+  position: absolute;
+  border-radius: 1.5rem;
+  transition: 1.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: -50ms;
+  z-index: 10;
+  background-size: cover;
+}
+.sign-up {
+  width: 50%;
+  border-radius: 1.5rem;
+}
+.sign-up h2,
+.sign-in h2 {
+  text-align: center;
+  margin-top: 4rem;
+  font-family: sans-serif;
+  font-weight: 100;
+  color: #75567d;
+}
+.form {
+  position: relative;
+  top: 8rem;
+
+  left: calc(((25rem) - 15rem) / 2);
+  /* margin: auto; */
+}
+
+.label {
+  position: relative;
+  left: -16rem;
+  top: -1;
+  transition: all 0.3s;
+  padding: 0 2px;
+  z-index: 1;
+  color: #9871a2;
+}
+.input {
+  margin: 0.5rem;
+  padding: 0.8rem;
+  border: 2px solid #9871a2;
+  background: #9f88a493;
+  border-radius: 5px;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.3s;
+  color: rgb(217, 216, 216);
+}
+
+.label::before {
+  content: "";
+  height: 5px;
+  background-color: #b49cc2;
+  position: absolute;
+  left: 0;
+  top: 7.4px;
+  width: 100%;
+  z-index: -1;
+}
+.input:focus {
+  border: 2px solid rgb(106, 120, 246);
+}
+.input:focus + .label,
+.filled {
+  top: -1.6rem;
+  color: rgb(106, 120, 246);
+  font-size: 15px;
+}
+.input::placeholder {
+  font-size: 16px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.input:focus::placeholder {
+  opacity: 1;
+  animation-delay: 0.2s;
+}
+
+.btn {
+  /* padding: 0.5rem 1rem; */
+  border-radius: 0.6rem;
+  text-align: center;
+  width: 50%;
+  border-radius: 1rem;
+}
+.form button {
+  margin: 2rem 0 0 0.5rem;
+}
+.switch {
+  color: #8565ef;
+  border: none;
+  background-color: #5d5c5c00;
+  position: relative;
+  left: 3rem;
+  font-family: "Sora";
+  font-weight: 300;
+}
+
+.submit {
+  width: 10rem;
+  height: 3rem;
+  position: relative;
+  left: 3rem;
+
+  text-transform: uppercase;
+  font-weight: bold;
+
+  background-color: #9d85ef;
+  border-radius: 100px;
+  box-shadow: rgba(197, 135, 231, 0.2) 0 -25px 18px -14px inset,
+    rgba(197, 135, 231, 0.15) 0 1px 2px, rgba(197, 135, 231, 0.15) 0 2px 4px,
+    rgba(197, 135, 231, 0.15) 0 4px 8px, rgba(197, 135, 231, 0.15) 0 8px 16px,
+    rgba(197, 135, 231, 0.15) 0 16px 32px;
+  color: #ebe3eebe;
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.submit:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+.sign-in {
+  width: 50%;
+  border-radius: 1rem;
+}
+.message {
+  position: absolute;
+  left: calc(2rem + ((25rem) - 15rem) / 2);
+  width: 25%;
+  text-align: center;
+}
+.l-message {
+  position: relative;
+  text-align: center;
+  left: 3rem;
+  height: 3rem;
+  width: 50%;
+}
+
+@media screen and (min-width: 1400px) {
+  .scaf {
+    width: 100%;
+  }
+  .cont {
+    width: 70rem;
+    height: 70vh;
+    position: absolute;
+    top: 15%;
+    left: calc((100vh -70rem) / 2);
+  }
+
+  .form {
+    position: relative;
+    top: 10rem;
+    left: calc(((70rem / 2) - 17rem) / 2);
+  }
+  .input-cont {
+    margin: 0;
+  }
+  .message {
+    position: absolute;
+    margin: auto;
+  }
+  .l-message {
+    /* position: absolute; */
+    margin: auto;
+  }
+}
